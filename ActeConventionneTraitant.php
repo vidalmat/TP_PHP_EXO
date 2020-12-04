@@ -7,6 +7,14 @@
         }
         
 
+        function facturer(ActeMedical $acte2){
+
+            $this->tarif = $acte2;
+            echo "Facture acte parcours soin " . $acte2 . " €<br>";
+
+        }
+        
+
     }
 
 

@@ -1,6 +1,6 @@
 <?php
 
-abstract class ActeMedical /*implements*/ {
+abstract class ActeMedical /*implements Parametre*/ {
 
     protected $nomPatient;
     protected $numSecu;
@@ -32,11 +32,9 @@ abstract class ActeMedical /*implements*/ {
     }
 
 
-    function facturer($payer){
+    abstract function facturer(ActeMedical $acte1);
 
-        $this->tarif += $payer;
 
-    }
 
     /**
      * SETTER (mutateur) de la propriété $nom : 

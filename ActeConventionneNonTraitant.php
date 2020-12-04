@@ -6,9 +6,15 @@
             parent::__construct($nomPatient, $numSecu, $codeMutuelle, $tauxRemboursement, $tarif);
         }
 
-
         
-    }
+        function facturer(ActeMedical $acte1){
+
+            $this->tarif = $acte1;
+            echo "Facture acte hors parcours " . $this->acte1->facturer() . " €<br>";
+
+        }
+            
+        }
 
 
 

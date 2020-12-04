@@ -7,6 +7,12 @@
         }
 
 
+        function facturer(ActeMedical $acte3){
+
+            $this->tarif = $acte3;
+            echo "Facture acte non conventionné " . $acte3 . " €<br>";
+
+        }
 
         
     }

@@ -21,4 +21,5 @@ echo $perso2->caracteristiques();
 echo $perso3->caracteristiques();
 
 
+
 ?>
