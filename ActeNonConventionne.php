@@ -7,20 +7,8 @@
         }
 
 
-        function facturer($payer){
 
-            $this->tarif += $payer;
-    
-        }
-
-
-        function honosup($sup){
-
-            if($this->tarif <= $sup){
-                return "Le montant supplémentaire des honoraires à payer est de " . $this->sup . "." . "<br>";
-            }
-            
-        }
+        
     }
 
 

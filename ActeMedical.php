@@ -7,6 +7,7 @@ abstract class ActeMedical /*implements*/ {
     protected $codeMutuelle;
     protected $tauxRemboursement;
     protected $tarif;
+    protected $sup;
 
 
 
@@ -22,7 +23,7 @@ abstract class ActeMedical /*implements*/ {
 
 
     function caracteristiques() {
-        return "Je suis " . $this->nomPatient . " et le tarif à payer est de " . $this->tarif . "€" . "." . "<br>";
+        return $this->nomPatient . " devra payer le tarif de " . $this->tarif . "€" . "." . "<br>";
     }
 
 
@@ -119,6 +120,23 @@ abstract class ActeMedical /*implements*/ {
      */
     function gettarif() {
         return $this->tarif;
+    }
+
+
+    /**
+     * SETTER (mutateur) de la propriété $nom : 
+     * @param string $nomperso : Nouveau nom à donner à ce personnage
+     */
+    function setsup(string $sup) {
+        $this->sup = $sup;
+    }
+
+    /**
+     * GETTER (accesseur) de la propriété $nom : 
+     * @return string : Retourne la valeur de la propriété $nom
+     */
+    function getsup() {
+        return $this->sup;
     }
 
 }

@@ -7,12 +7,6 @@
         }
         
 
-        function facturer($payer){
-
-            $this->tarif += $payer;
-            return "Le tarif à payer est de " . $this->payer .  "€" . "." . "<br>";
-    
-        }
     }
 
 
