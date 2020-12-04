@@ -9,7 +9,12 @@
             $this->honorairesSupp = $hono;
         }
 
-        
+        public function facturer(): float{
+
+            return $this->tarif + $this->honorairesSupp;
+        }
+    
+    
     }
 
 

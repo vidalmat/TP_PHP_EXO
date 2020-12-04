@@ -6,20 +6,22 @@ require_once "ActeConventionneNonTraitant.php";
 require_once "ActeConventionneTraitant.php";
 require_once "ActeNonConventionne.php";
 
-$perso1 = new ActeConventionneNonTraitant("Jean", 1231515, 6515,0.4);
-$perso2 = new ActeConventionneTraitant("Fin", 456489, 168898,0.7);
-$perso3 = new ActeNonConventionne("Laetitia", 489789, 18948984,0.4);
+$acte1 = new ActeConventionneNonTraitant("Jean", 1231515, 6515,46546);
+$acte2 = new ActeConventionneTraitant("Fin", 456489, 168898,8465242);
+$acte3 = new ActeNonConventionne("Laetitia", 489789, 18948984,465426245, 50);
 
 
-var_dump($perso1);
-var_dump($perso2);
-var_dump($perso3);
+var_dump($acte1);
+var_dump($acte2);
+var_dump($acte3);
 
+echo $acte1->prescrire();
+echo $acte2->prescrire();
+echo $acte3->prescrire();
 
-echo $perso1->caracteristiques();
-echo $perso2->caracteristiques();
-echo $perso3->caracteristiques();
-
+echo "Facture parcours médecin traitant " . $acte1->facturer() . " € <br>";
+echo "Facture hors parcours médecin traitant " . $acte2->facturer() . " € <br>";
+echo "Facture acte non conventionné " . $acte3->facturer() . " € <br>";
 
 
 ?>
