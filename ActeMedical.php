@@ -6,11 +6,7 @@ abstract class ActeMedical /*implements*/ {
     protected $numSecu;
     protected $codeMutuelle;
     protected $tauxRemboursement;
-
-
-
-
-
+    protected $tarif;
 
 
 
@@ -90,6 +86,23 @@ abstract class ActeMedical /*implements*/ {
      */
     function gettauxRemboursement() {
         return $this->tauxRemboursement;
+    }
+
+
+    /**
+     * SETTER (mutateur) de la propriété $nom : 
+     * @param string $nomperso : Nouveau nom à donner à ce personnage
+     */
+    function settarif(string $tarif) {
+        $this->tarif = $tarif;
+    }
+
+    /**
+     * GETTER (accesseur) de la propriété $nom : 
+     * @return string : Retourne la valeur de la propriété $nom
+     */
+    function gettarif() {
+        return $this->tarif;
     }
 
 }
