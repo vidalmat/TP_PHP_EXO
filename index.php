@@ -6,9 +6,9 @@ require_once "ActeConventionneTraitant.php";
 require_once "ActeNonConventionne.php";
 require_once "Transmettre.php";
 
-$perso1 = new ActeConventionneNonTraitant("Jean") ;
-$perso2 = new ActeConventionneTraitant("Fin");
-$perso3 = new ActeNonConventionne("Laetitia");
+$perso1 = new ActeMedical("Jean") ;
+$perso2 = new ActeMedical("Fin");
+$perso3 = new ActeMedical("Laetitia");
 
 
 var_dump($perso1);
