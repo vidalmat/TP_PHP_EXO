@@ -11,6 +11,10 @@ $perso2 = new ActeConventionneTraitant("Fin");
 $perso3 = new ActeNonConventionne("Laetitia");
 
 
+var_dump($perso1);
+var_dump($perso2);
+var_dump($perso3);
+
 
 
 
