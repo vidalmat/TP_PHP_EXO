@@ -10,6 +10,22 @@ abstract class ActeMedical /*implements*/ {
 
 
 
+    function __construct(string $nomPatient, int $numSecu, int $codeMutuelle, $tauxRemboursement, int $tarif = 25) {
+        $this->nomPatient = $nomPatient;
+        $this->numSecu = $numSecu;
+        $this->codeMutuelle = $codeMutuelle;
+        $this->tauxRemboursement = $tauxRemboursement;
+        $this->tarif = $tarif;
+    }
+
+
+
+
+    function caracteristiques() {
+        return "Je suis " . $this->nomPatient . " et le tarif à payer est de " . $this->tarif ."<br>";
+    }
+
+
     function prescrire(){
 
     }
@@ -17,7 +33,7 @@ abstract class ActeMedical /*implements*/ {
 
     function facturer(){
 
-
+        
 
     }
 

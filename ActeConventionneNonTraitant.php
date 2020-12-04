@@ -3,6 +3,7 @@
     class ActeConventionneNonTraitant extends ActeMedical{
 
             
+        
     }
 
 
