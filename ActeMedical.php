@@ -22,7 +22,7 @@ abstract class ActeMedical /*implements*/ {
 
 
     function caracteristiques() {
-        return "Je suis " . $this->nomPatient . " et le tarif à payer est de " . $this->tarif ."<br>";
+        return "Je suis " . $this->nomPatient . " et le tarif à payer est de " . $this->tarif . "€" . "." . "<br>";
     }
 
 

@@ -10,7 +10,6 @@
         function facturer($payer){
 
             $this->tarif += $payer;
-    
         }
 
         
