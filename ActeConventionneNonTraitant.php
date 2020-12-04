@@ -2,17 +2,11 @@
 
     class ActeConventionneNonTraitant extends ActeMedical{
 
-        function __construct(string $nomPatient, int $numSecu, int $codeMutuelle, $tauxRemboursement, int $tarif = 35) {
-            parent::__construct($nomPatient, $numSecu, $codeMutuelle, $tauxRemboursement, $tarif);
+        function __construct(string $nom, int $num, int $code, float $tx = 0.4) {
+            parent::__construct($nom, $num, $code, $tx);
         }
 
         
-        function facturer(ActeMedical $acte1){
-
-            $this->tarif = $acte1;
-            echo "Facture acte hors parcours " . $this->acte1->facturer() . " €<br>";
-
-        }
             
         }
 

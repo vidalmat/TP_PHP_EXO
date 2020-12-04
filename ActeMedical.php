@@ -1,21 +1,20 @@
 <?php
 
-abstract class ActeMedical /*implements Parametre*/ {
+abstract class ActeMedical implements Transmettre {
 
     protected $nomPatient;
     protected $numSecu;
     protected $codeMutuelle;
     protected $tauxRemboursement;
     protected $tarif;
-    protected $sup;
 
 
 
-    function __construct(string $nomPatient, int $numSecu, int $codeMutuelle, $tauxRemboursement, int $tarif = 25) {
-        $this->nomPatient = $nomPatient;
-        $this->numSecu = $numSecu;
-        $this->codeMutuelle = $codeMutuelle;
-        $this->tauxRemboursement = $tauxRemboursement;
+    public function __construct(string $nom, int $num, int $code, float $tx, int $tarif = 25) {
+        $this->nomPatient = $nom;
+        $this->numSecu = $num;
+        $this->codeMutuelle = $code;
+        $this->tauxRemboursement = $tx;
         $this->tarif = $tarif;
     }
 
@@ -27,12 +26,14 @@ abstract class ActeMedical /*implements Parametre*/ {
     }
 
 
-    function prescrire(){
-
+    public function prescrire(): string {
+        return "Paracetamol 1000mg";
     }
 
 
-    abstract function facturer(ActeMedical $acte1);
+    public function facturer(): float{
+        return 0;
+    }
 
 
 
