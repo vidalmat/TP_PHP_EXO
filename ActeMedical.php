@@ -31,9 +31,9 @@ abstract class ActeMedical /*implements*/ {
     }
 
 
-    function facturer(){
+    function facturer($payer){
 
-        
+        $this->tarif += $payer;
 
     }
 
