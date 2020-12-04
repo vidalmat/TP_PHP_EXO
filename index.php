@@ -24,4 +24,9 @@ echo "Facture hors parcours médecin traitant " . $acte2->facturer() . " € <br
 echo "Facture acte non conventionné " . $acte3->facturer() . " € <br>";
 
 
+echo "Facture (dispense avance frais) acte parcours soin " . $acte1->dispenseAvanceFrais() . " € <br>";
+echo "Facture (dispense avance frais) acte hors parcours " . $acte2->dispenseAvanceFrais() . " € <br>";
+echo "Facture (dispense avance frais) acte non conventionne " . $acte3->dispenseAvanceFrais() . " € <br>";
+
+
 ?>

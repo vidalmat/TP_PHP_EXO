@@ -6,9 +6,11 @@ abstract class ActeMedical implements Transmettre {
     protected $numSecu;
     protected $codeMutuelle;
     protected $tauxRemboursement;
-    protected $tarif = 25;
+    protected static $tarif = 25;
 
-
+    // $this->nomPatient; 
+    // ActeMedical::$tarif;
+    // Self::$tarif; 
 
     public function __construct(string $nom, int $num, int $code, float $tx) {
         $this->nomPatient = $nom;
@@ -32,13 +34,10 @@ abstract class ActeMedical implements Transmettre {
 
     public function facturer(): float{
 
-        return $this->tarif;
+        return Self::$tarif;
     }
 
-    public function dispenseAvanceFrais(): float{
-        return $this->tx;
-    }
-
+    public abstract function dispenseAvanceFrais(): float;
 
 
     /**
@@ -125,22 +124,6 @@ abstract class ActeMedical implements Transmettre {
         return $this->tarif;
     }
 
-
-    /**
-     * SETTER (mutateur) de la propriété $nom : 
-     * @param string $nomperso : Nouveau nom à donner à ce personnage
-     */
-    function setsup(string $sup) {
-        $this->sup = $sup;
-    }
-
-    /**
-     * GETTER (accesseur) de la propriété $nom : 
-     * @return string : Retourne la valeur de la propriété $nom
-     */
-    function getsup() {
-        return $this->sup;
-    }
 
 }
 ?>

@@ -6,7 +6,9 @@
             parent::__construct($nom, $num, $code, $tx);
         }
         
-            
+        public function dispenseAvanceFrais(): float{
+            return Self::$tarif - Self::$tarif * $this->tauxRemboursement;
+        }
         }
 
 
